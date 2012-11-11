@@ -9,9 +9,9 @@ Gem::Specification.new do |gem|
   gem.version       = RJS::If::VERSION
   gem.authors       = ["Daniel Vandersluis"]
   gem.email         = ["dvandersluis@selfmgmt.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
+  gem.description   = "Add if/unless blocks to RJS"
+  gem.summary       = "Add if and unless methods to the page object when working in RJS." 
+  gem.homepage      = "https://github.com/talentnest/rjs-if"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
