@@ -30,9 +30,17 @@ module GeneratorIfBlocks
     self << "}"
   end
 
+  def elsif(expression)
+    self << "else if( !( #{javascript_for(expression) } ) ) {"
+    yield if block_given?
+    self << "}"
+  end
+
   # Close javascript block and open an 'else' block
   def else
-    self << "} else {"
+    self << "else {"
+    yield if block_given?
+    self << "}"
   end
 
   protected
