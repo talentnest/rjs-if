@@ -31,7 +31,7 @@ module GeneratorIfBlocks
   end
 
   def elsif(expression)
-    self << "else if( !( #{javascript_for(expression) } ) ) {"
+    self << "else if( #{javascript_for(expression) } ) {"
     yield if block_given?
     self << "}"
   end
